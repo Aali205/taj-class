@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الأصناف | تاج كلاس</title>
+<meta name="description" content="كل أصناف حلويات تاج كلاس: وربات بالقشطة، نابلسية، كنافة، بقلاوة، معمول ونواشف. ابحث وفلتر حسب النوع والحشوة واطلب على واتساب.">
+<meta name="theme-color" content="#1A130B">
+<meta property="og:title" content="الأصناف | تاج كلاس">
+<meta property="og:description" content="كل أصناف حلويات تاج كلاس، مصنوعة بالسمنة الحيوانية.">
+<meta property="og:image" content="assets/img/post06.webp">
+<link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-48.png" sizes="48x48" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<script>document.documentElement.classList.add("js")</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600&family=Aref+Ruqaa:wght@400;700&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;1,6..96,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="page--sub page--sweets" data-title-ar="الأصناف | تاج كلاس" data-title-en="Sweets | Taj Class">
+
+<!-- partial:header -->
+<header class="bar" id="bar">
+  <a class="bar__logo" href="index.html" aria-label="تاج كلاس، الصفحة الرئيسية" data-i18n-label="nav.homeLabel">
+    <img src="assets/logo.svg" alt="" width="84" height="106">
+  </a>
+  <nav class="bar__nav" aria-label="الأقسام" data-i18n-label="nav.label">
+    <a href="sweets.html" data-i18n="nav.sweets" aria-current="page">الأصناف</a>
+    <a href="gifts.html" data-i18n="nav.gifts">الضيافة والهدايا</a>
+    <a href="branches.html" data-i18n="nav.branches">الفروع</a>
+  </nav>
+  <div class="bar__tools">
+    <button class="lang" id="langBtn" type="button" aria-label="English">EN</button>
+    <button class="basket-btn" id="basketBtn" type="button" aria-controls="basket" aria-expanded="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h16l-1.4 10.2a2 2 0 0 1-2 1.8H7.4a2 2 0 0 1-2-1.8L4 9Z"/><path d="M8.5 9 12 3.5 15.5 9"/></svg>
+      <span data-i18n="basket">طلبيتك</span>
+      <b class="basket-btn__count" id="basketCount">0</b>
+    </button>
+  </div>
+</header>
+<!-- /partial:header -->
+
+<main id="top">
+  <section class="page-head lattice" aria-labelledby="pageTitle">
+    <div class="page-head__text">
+      <h1 class="page-title" id="pageTitle" data-i18n="sw.title">أصنافنا</h1>
+      <p class="page-lede" data-i18n="sw.lede">كل حلويات تاج، مصنوعة بالسمنة الحيوانية. دوّر على الاسم أو فلتر حسب النوع والحشوة.</p>
+    </div>
+    <form class="search" id="searchForm" role="search">
+      <label class="visually-hidden" for="q" data-i18n="sw.search">دوّر على صنف</label>
+      <svg class="search__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>
+      <input class="search__input" id="q" type="search" autocomplete="off" placeholder="دوّر: كنافة، فستق، معمول…" data-i18n-ph="sw.searchPh">
+      <button class="search__clear" id="qClear" type="button" hidden aria-label="مسح البحث" data-i18n-label="sw.clear"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    </form>
+  </section>
+
+  <div class="shelf">
+  <div class="filters" id="filters">
+    <div class="filters__inner">
+      <div class="chips" role="radiogroup" aria-labelledby="catLabel">
+        <span class="visually-hidden" id="catLabel" data-i18n="sw.cats">النوع</span>
+        <div class="chips__row" id="catChips"></div>
+      </div>
+      <div class="filters__side">
+        <div class="chips chips--tags" role="group" aria-labelledby="tagLabel">
+          <span class="filters__label" id="tagLabel" data-i18n="sw.tags">الحشوة والوجه</span>
+          <div class="chips__row" id="tagChips"></div>
+        </div>
+        <label class="sort">
+          <span class="visually-hidden" data-i18n="sw.sort">الترتيب</span>
+          <select id="sortSel">
+            <option value="default" data-i18n="sw.sortDefault">اختياراتنا أولاً</option>
+            <option value="az" data-i18n="sw.sortAz">حسب الاسم</option>
+          </select>
+        </label>
+      </div>
+    </div>
+    <div class="filters__status">
+      <p class="results" id="results" aria-live="polite"></p>
+      <button class="text-btn" id="clearAll" type="button" hidden data-i18n="sw.clear">امسح الفلاتر</button>
+    </div>
+  </div>
+
+  <section class="catalog" aria-labelledby="pageTitle">
+    <ul class="grid" id="grid"></ul>
+    <div class="empty" id="empty" hidden>
+      <img src="assets/mark.svg" alt="" width="60" height="118">
+      <h2 data-i18n="sw.emptyH">ما لقينا شي بهالبحث</h2>
+      <p data-i18n="sw.emptyP">جرّب كلمة أقصر، أو امسح الفلاتر لتشوف كل الأصناف.</p>
+      <button class="btn btn--ink" id="emptyClear" type="button" data-i18n="sw.clear">امسح الفلاتر</button>
+    </div>
+  </section>
+
+  </div>
+
+  <section class="promo">
+    <img class="promo__img" src="assets/img/pro-maamoul-box.webp" alt="" loading="lazy" width="1600" height="1600">
+    <div class="promo__text">
+      <h2 class="display" data-i18n="sw.giftsH">عندك ضيوف؟</h2>
+      <p data-i18n="sw.giftsP">علبنا بتجمع كذا صنف مع بعض، للعيد ورمضان وكل المناسبات.</p>
+      <a class="btn btn--gold" href="gifts.html" data-i18n="sw.giftsCta">شوف العلب</a>
+    </div>
+  </section>
+</main>
+
+<!-- ============ PRODUCT DETAIL ============ -->
+<dialog class="sheet" id="sheet" aria-labelledby="sheetName">
+  <div class="sheet__card">
+    <button class="icon-btn sheet__close" id="sheetClose" type="button" aria-label="إغلاق"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <div class="sheet__media" id="sheetMedia"></div>
+    <div class="sheet__body">
+      <p class="sheet__cat" id="sheetCat"></p>
+      <h2 class="sheet__name" id="sheetName"></h2>
+      <p class="sheet__desc" id="sheetDesc"></p>
+      <ul class="sheet__tags" id="sheetTags"></ul>
+      <p class="sheet__only" id="sheetOnly" hidden></p>
+      <div class="sheet__buy">
+        <div class="stepper" role="group" id="sheetStepper">
+          <button type="button" data-step="-1" id="stepLess">−</button>
+          <output id="sheetQty"></output>
+          <button type="button" data-step="1" id="stepMore">+</button>
+        </div>
+        <button class="btn btn--gold" type="button" id="sheetAdd"></button>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<!-- partial:footer -->
+<footer class="foot">
+  <img class="foot__logo" src="assets/logo.svg" alt="تاج كلاس" width="120" height="150" loading="lazy">
+  <p class="foot__line" data-i18n="foot.line">للحلويات الشرقية الفاخرة</p>
+  <ul class="foot__links">
+    <li><a href="sweets.html" data-i18n="nav.sweets">الأصناف</a></li>
+    <li><a href="gifts.html" data-i18n="nav.gifts">الضيافة والهدايا</a></li>
+    <li><a href="branches.html" data-i18n="nav.branches">الفروع</a></li>
+  </ul>
+  <ul class="foot__links foot__links--social">
+    <li><a href="https://www.instagram.com/tajclaas/" target="_blank" rel="noopener">Instagram</a></li>
+    <li><a href="https://www.youtube.com/@tajclass12" target="_blank" rel="noopener">YouTube</a></li>
+    <li><a href="https://wa.me/963965875990" target="_blank" rel="noopener">WhatsApp</a></li>
+  </ul>
+  <p class="foot__small">© <span id="year"></span> <span data-i18n="foot.rights">تاج كلاس. كل الحقوق محفوظة.</span></p>
+</footer>
+<!-- /partial:footer -->
+
+<!-- partial:tabbar -->
+<nav class="tabbar" aria-label="التنقل" data-i18n-label="nav.label">
+  <a href="index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11 12 4l8 7v8a1 1 0 0 1-1 1h-4v-6H9v6H5a1 1 0 0 1-1-1Z"/></svg><span data-i18n="nav.home">الرئيسية</span></a>
+  <a href="sweets.html" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 15c0-4 3.6-7 8-7s8 3 8 7Z"/><path d="M3 15h18M12 8V5"/><circle cx="12" cy="4" r="1"/></svg><span data-i18n="nav.sweets">الأصناف</span></a>
+  <a href="gifts.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10h16v10H4ZM3 7h18v3H3ZM12 7v13"/><path d="M12 7C10 3 7 4 8 6.5 8.6 7 12 7 12 7ZM12 7c2-4 5-3 4-.5-.6.5-4 .5-4 .5Z"/></svg><span data-i18n="nav.gifts">الضيافة والهدايا</span></a>
+  <a href="branches.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0C18.5 15.4 12 21 12 21Z"/><circle cx="12" cy="10" r="2.3"/></svg><span data-i18n="nav.branches">الفروع</span></a>
+</nav>
+<!-- /partial:tabbar -->
+
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/vendor/Flip.min.js"></script>
+<script src="assets/vendor/lenis.min.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/sweets.js"></script>
+</body>
+</html>

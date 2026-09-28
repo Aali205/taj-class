@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الضيافة والهدايا | تاج كلاس</title>
+<meta name="description" content="علب وصواني تاج كلاس للعيد ورمضان واستقبال الحجاج والمناسبات. اختار علبة أو اطلب علبة خاصة على واتساب.">
+<meta name="theme-color" content="#1A130B">
+<meta property="og:title" content="الضيافة والهدايا | تاج كلاس">
+<meta property="og:description" content="علب وصواني حلويات لكل المناسبات.">
+<meta property="og:image" content="assets/img/post25.webp">
+<link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-48.png" sizes="48x48" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<script>document.documentElement.classList.add("js")</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600&family=Aref+Ruqaa:wght@400;700&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;1,6..96,400&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/img/post25.webp">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="page--sub page--gifts" data-title-ar="الضيافة والهدايا | تاج كلاس" data-title-en="Gifts & hosting | Taj Class">
+
+<!-- partial:header -->
+<header class="bar" id="bar">
+  <a class="bar__logo" href="index.html" aria-label="تاج كلاس، الصفحة الرئيسية" data-i18n-label="nav.homeLabel">
+    <img src="assets/logo.svg" alt="" width="84" height="106">
+  </a>
+  <nav class="bar__nav" aria-label="الأقسام" data-i18n-label="nav.label">
+    <a href="sweets.html" data-i18n="nav.sweets">الأصناف</a>
+    <a href="gifts.html" data-i18n="nav.gifts" aria-current="page">الضيافة والهدايا</a>
+    <a href="branches.html" data-i18n="nav.branches">الفروع</a>
+  </nav>
+  <div class="bar__tools">
+    <button class="lang" id="langBtn" type="button" aria-label="English">EN</button>
+    <button class="basket-btn" id="basketBtn" type="button" aria-controls="basket" aria-expanded="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h16l-1.4 10.2a2 2 0 0 1-2 1.8H7.4a2 2 0 0 1-2-1.8L4 9Z"/><path d="M8.5 9 12 3.5 15.5 9"/></svg>
+      <span data-i18n="basket">طلبيتك</span>
+      <b class="basket-btn__count" id="basketCount">0</b>
+    </button>
+  </div>
+</header>
+<!-- /partial:header -->
+
+<main id="top">
+  <section class="gift-hero" aria-labelledby="pageTitle">
+    <div class="gift-hero__text">
+      <h1 class="page-title" id="pageTitle" data-i18n="gf.title">الضيافة والهدايا</h1>
+      <p class="page-lede" data-i18n="gf.lede">علب وصواني لكل مناسبة، بتتجهز بالفرع بنفس اليوم. اختار علبة، أو قلّنا شو بدك ومنجهزلك ياها.</p>
+      <a class="btn btn--gold" href="#builder" data-i18n="gf.jump">اطلب علبة خاصة</a>
+    </div>
+    <figure class="gift-hero__media">
+      <img src="assets/img/post25.webp" alt="علبة تاج كلاس الذهبية مليانة بقلاوة مشكلة" width="1440" height="1440" fetchpriority="high">
+    </figure>
+  </section>
+
+  <div class="shelf">
+  <div class="filters filters--simple" id="filters">
+    <div class="filters__inner">
+      <div class="chips" role="radiogroup" aria-labelledby="occLabel">
+        <span class="visually-hidden" id="occLabel" data-i18n="gf.occ">المناسبة</span>
+        <div class="chips__row" id="occChips"></div>
+      </div>
+      <p class="results" id="results" aria-live="polite"></p>
+    </div>
+  </div>
+
+  <section class="boxes" aria-labelledby="pageTitle">
+    <ul class="box-grid" id="boxGrid"></ul>
+    <div class="empty" id="empty" hidden>
+      <img src="assets/mark.svg" alt="" width="60" height="118">
+      <h2 data-i18n="gf.emptyH">ما في علب لهالمناسبة لسا</h2>
+      <p data-i18n="gf.emptyP">اطلب علبة خاصة تحت، ومنجهزلك وحدة.</p>
+    </div>
+  </section>
+
+  </div>
+
+  <section class="builder lattice" id="builder" aria-labelledby="builderTitle">
+    <div class="builder__head">
+      <h2 class="display" id="builderTitle" data-i18n="gf.buildH">اطلب علبة خاصة</h2>
+      <p data-i18n="gf.buildP">أربع اختيارات سريعة، وبيوصلنا طلبك على واتساب. منرد عليك بالخيارات والأسعار.</p>
+    </div>
+    <form class="builder__form" id="builderForm" novalidate>
+      <ol class="steps">
+        <li class="step">
+          <fieldset>
+            <legend class="step__title" data-i18n="gf.s1">المناسبة</legend>
+            <div class="chips__row chips__row--wrap" id="bOcc"></div>
+            <p class="field-error" id="bOccErr" hidden></p>
+          </fieldset>
+        </li>
+        <li class="step">
+          <fieldset>
+            <legend class="step__title" data-i18n="gf.s2">الكمية</legend>
+            <div class="seg" role="radiogroup" id="bUnit">
+              <button type="button" role="radio" aria-checked="true" data-unit="boxes" data-i18n="gf.boxes">عدد العلب</button>
+              <button type="button" role="radio" aria-checked="false" data-unit="guests" data-i18n="gf.guests">أو عدد الضيوف</button>
+            </div>
+            <div class="stepper stepper--lg" role="group" id="bCountGroup">
+              <button type="button" data-count="-1" aria-label="أقل">−</button>
+              <output id="bCount"></output>
+              <button type="button" data-count="1" aria-label="أكتر">+</button>
+            </div>
+          </fieldset>
+        </li>
+        <li class="step">
+          <fieldset>
+            <legend class="step__title" data-i18n="gf.s3">الأصناف اللي بتحبها جوّا</legend>
+            <div class="chips__row chips__row--wrap" id="bSweets"></div>
+          </fieldset>
+        </li>
+        <li class="step">
+          <fieldset>
+            <legend class="step__title" data-i18n="gf.s4">إيمتى بدك ياها؟</legend>
+            <div class="builder__fields">
+              <label><span data-i18n="gf.date">التاريخ</span><input type="date" id="bDate" required></label>
+              <label><span data-i18n="gf.branch">الفرع</span><select id="bBranch"></select></label>
+              <label><span data-i18n="gf.name">اسمك</span><input id="bName" autocomplete="name" required></label>
+            </div>
+          </fieldset>
+        </li>
+      </ol>
+      <div class="builder__send">
+        <button class="btn btn--gold" type="submit" data-i18n="gf.send">أرسل الطلب على واتساب</button>
+        <p class="basket__fine" data-i18n="gf.fine">ما في دفع هلق. الفرع بيأكدلك التشكيلة والسعر وموعد الاستلام.</p>
+      </div>
+    </form>
+  </section>
+
+  <section class="pro-strip" aria-hidden="true">
+    <img src="assets/img/pro-baklava-round.webp" alt="" loading="lazy" width="1600" height="1600">
+    <img src="assets/img/pro-maamoul-box.webp" alt="" loading="lazy" width="1600" height="1600">
+    <img src="assets/img/pro-baklava-platter.webp" alt="" loading="lazy" width="1600" height="1600">
+  </section>
+</main>
+
+<!-- partial:footer -->
+<footer class="foot">
+  <img class="foot__logo" src="assets/logo.svg" alt="تاج كلاس" width="120" height="150" loading="lazy">
+  <p class="foot__line" data-i18n="foot.line">للحلويات الشرقية الفاخرة</p>
+  <ul class="foot__links">
+    <li><a href="sweets.html" data-i18n="nav.sweets">الأصناف</a></li>
+    <li><a href="gifts.html" data-i18n="nav.gifts">الضيافة والهدايا</a></li>
+    <li><a href="branches.html" data-i18n="nav.branches">الفروع</a></li>
+  </ul>
+  <ul class="foot__links foot__links--social">
+    <li><a href="https://www.instagram.com/tajclaas/" target="_blank" rel="noopener">Instagram</a></li>
+    <li><a href="https://www.youtube.com/@tajclass12" target="_blank" rel="noopener">YouTube</a></li>
+    <li><a href="https://wa.me/963965875990" target="_blank" rel="noopener">WhatsApp</a></li>
+  </ul>
+  <p class="foot__small">© <span id="year"></span> <span data-i18n="foot.rights">تاج كلاس. كل الحقوق محفوظة.</span></p>
+</footer>
+<!-- /partial:footer -->
+
+<!-- partial:tabbar -->
+<nav class="tabbar" aria-label="التنقل" data-i18n-label="nav.label">
+  <a href="index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11 12 4l8 7v8a1 1 0 0 1-1 1h-4v-6H9v6H5a1 1 0 0 1-1-1Z"/></svg><span data-i18n="nav.home">الرئيسية</span></a>
+  <a href="sweets.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 15c0-4 3.6-7 8-7s8 3 8 7Z"/><path d="M3 15h18M12 8V5"/><circle cx="12" cy="4" r="1"/></svg><span data-i18n="nav.sweets">الأصناف</span></a>
+  <a href="gifts.html" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10h16v10H4ZM3 7h18v3H3ZM12 7v13"/><path d="M12 7C10 3 7 4 8 6.5 8.6 7 12 7 12 7ZM12 7c2-4 5-3 4-.5-.6.5-4 .5-4 .5Z"/></svg><span data-i18n="nav.gifts">الضيافة والهدايا</span></a>
+  <a href="branches.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0C18.5 15.4 12 21 12 21Z"/><circle cx="12" cy="10" r="2.3"/></svg><span data-i18n="nav.branches">الفروع</span></a>
+</nav>
+<!-- /partial:tabbar -->
+
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/vendor/Flip.min.js"></script>
+<script src="assets/vendor/lenis.min.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/gifts.js"></script>
+</body>
+</html>

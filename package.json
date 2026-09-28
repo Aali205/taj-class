@@ -1,0 +1,10 @@
+{
+  "name": "TAJ CLASS",
+  "version": "1.0.0",
+  "description": "Taj Class — luxury oriental sweets website",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "private": true
+}

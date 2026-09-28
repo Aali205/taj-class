@@ -1,0 +1,9 @@
+node_modules/
+.DS_Store
+Thumbs.db
+
+# editor settings
+.idea/
+
+# original photos kept for reference; the site uses the optimized copies in assets/img
+source-media/
